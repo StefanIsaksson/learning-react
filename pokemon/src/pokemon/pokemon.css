@@ -1,0 +1,10 @@
+.stats {
+    font-size: larger;
+    color: blueviolet;
+}
+
+.picture {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #dee2e6;
+}
