@@ -4,6 +4,7 @@ import Header from './header';
 import FeaturedPokemon from './featured-pokemon'
 import SearchResults from '../search-results'
 import PokemonFilter from './pokemon-filter';
+import PokemonDetail from '../pokemon';
 
 class App extends Component {
   state = {}
@@ -12,12 +13,21 @@ class App extends Component {
     this.fetchPokemons();
   }
 
-  fetchPokemonDetails = (pokedexNumber) => {
+  fetchFeaturedPokemonDetails = (pokedexNumber) => {
     fetch('http://localhost:5000/pokemons/' + pokedexNumber )
     .then(rsp => rsp.json())
     .then(featuredPokemon => {
       featuredPokemon = featuredPokemon[0];
       this.setState({ featuredPokemon});
+    })
+  }
+
+  fetchActivePokemonDetails = (pokedexNumber) => {
+    fetch('http://localhost:5000/pokemons/' + pokedexNumber )
+    .then(rsp => rsp.json())
+    .then(activePokemon => {
+      activePokemon = activePokemon[0];
+      this.setState({ activePokemon});
     })
   }
 
@@ -35,7 +45,7 @@ class App extends Component {
     if(this.allPokemons) {
       const randomIndex = Math.floor(Math.random() * this.allPokemons.length)
       const featuredPokemonPokedex = this.allPokemons[randomIndex].pokedex_number;
-      this.fetchPokemonDetails(featuredPokemonPokedex);
+      this.fetchFeaturedPokemonDetails(featuredPokemonPokedex);
     }
   }
 
@@ -57,7 +67,7 @@ class App extends Component {
   }
 
   setActivePokemon = (pokemon) => {
-    this.setState({ activePokemon: pokemon });
+    this.fetchActivePokemonDetails(pokemon.pokedex_number)
   }
 
   render() {
@@ -65,6 +75,8 @@ class App extends Component {
     if (this.state.generation)
       activeComponent = <SearchResults generation={this.state.generation}
       filteredPokemons={this.state.filteredPokemons} setActivePokemon={this.setActivePokemon} />;
+    if(this.state.activePokemon)
+      activeComponent = <PokemonDetail pokemon={this.state.activePokemon}/>;
     if(!activeComponent)
       activeComponent = <FeaturedPokemon pokemon={this.state.featuredPokemon}/>
     return (

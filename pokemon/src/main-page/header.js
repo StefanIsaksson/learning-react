@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './ball.png'
+import logo from './logo.png'
 
 const Header = (props) => (
     <header className="row">
