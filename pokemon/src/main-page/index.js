@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   fetchFeaturedPokemonDetails = (pokedexNumber) => {
-    fetch('http://localhost:5000/pokemons/' + pokedexNumber )
+    fetch('http://localhost:5000/pokemons_stats/' + pokedexNumber )
     .then(rsp => rsp.json())
     .then(featuredPokemon => {
       featuredPokemon = featuredPokemon[0];
@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   fetchActivePokemonDetails = (pokedexNumber) => {
-    fetch('http://localhost:5000/pokemons/' + pokedexNumber )
+    fetch('http://localhost:5000/pokemons_stats/' + pokedexNumber )
     .then(rsp => rsp.json())
     .then(activePokemon => {
       activePokemon = activePokemon[0];

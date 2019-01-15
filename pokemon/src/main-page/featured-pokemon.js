@@ -2,7 +2,6 @@ import React from 'react';
 import Pokemon from '../pokemon'
 
 const FeaturedPokemon = (props) => {
-    console.log(props.pokemon)
     if(props.pokemon) return (
         <div>
             <div className="row featuredPokemon">
