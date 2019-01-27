@@ -3,6 +3,8 @@ import axios from 'axios';
 import RockTable from './Tables/RockTable'
 import AddRockForm from './Forms/AddRockForm'
 import EditRockForm from './Forms/EditRockForm'
+import Header from './Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
   const rocksData = []
@@ -63,31 +65,18 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>CRUD App with Hooks</h1>
-      <div className="flex-row">
-        <div className="flex-large">
+      <Header/>
           {editing ? (
-            <div>
-              <h2>Edit rock</h2>
               <EditRockForm
                 editing={editing}
                 setEditing={setEditing}
                 currentRock={currentRock}
                 updateRock={updateRock}
               />
-            </div>
           ) : (
-              <div className="flex-large">
-                <h2>Add rock</h2>
                 <AddRockForm addRock={addRock} />
-              </div>
             )}
-        </div>
-        <div className="flex-large">
-          <h2>View rock</h2>
           <RockTable rocks={rocks} editRock={editRock} deleteRock={deleteRock} />
-        </div>
-      </div>
     </div>
   )
 }
