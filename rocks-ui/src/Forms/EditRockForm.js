@@ -24,7 +24,6 @@ const EditUserForm = props => {
 				<form
 					onSubmit={event => {
 						event.preventDefault()
-						console.log(props.editing)
 						if(props.editing){
 							props.updateRock(rock.id, rock)
 						} 
@@ -57,6 +56,36 @@ const EditUserForm = props => {
 							className="form-control"
 							placeholder="Enter a visual description of the rock"
 							value={rock.visualDescription}
+							onChange={handleInputChange} />
+					</div>
+					<div className="form-group">
+						<label htmlFor="rockFormation">Formation</label>
+						<textarea type="text"
+							id="rockFormation"
+							name="rockFormation"
+							className="form-control"
+							placeholder="Describe how rock is formed"
+							value={rock.rockFormation}
+							onChange={handleInputChange} />
+					</div>
+					<div className="form-group">
+						<label htmlFor="mineralComposition">Mineral Composition</label>
+						<textarea type="text"
+							id="mineralComposition"
+							name="mineralComposition"
+							className="form-control"
+							placeholder="Describe the rocks mineral composition"
+							value={rock.mineralComposition}
+							onChange={handleInputChange} />
+					</div>
+					<div className="form-group">
+						<label htmlFor="location">Location</label>
+						<textarea type="text"
+							id="location"
+							name="location"
+							className="form-control"
+							placeholder="Describe where rock is commonly found"
+							value={rock.location}
 							onChange={handleInputChange} />
 					</div>
 					<button className="btn btn-primary">Update rock</button>

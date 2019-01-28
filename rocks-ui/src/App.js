@@ -22,7 +22,7 @@ const App = () => {
     () => { updateRockList(); }, []
   );
 
-  const initialFormState = { id: null, name: '', visualDescription: '', pictureUrl: '' }
+  const initialFormState = { id: null, name: '', visualDescription: '', pictureUrl: '', rockFormation: '' }
 
   const [rocks, setRocks] = useState(rocksData)
 
@@ -61,7 +61,16 @@ const App = () => {
   const editRock = rock => {
     setEditing(true)
 
-    setCurrentRock({ id: rock.id, name: rock.name, visualDescription: rock.visualDescription, pictureUrl: rock.pictureUrl })
+    setCurrentRock({ id: rock.id, 
+      name: rock.name, 
+      rockType: rock.rockType,
+      visualDescription: rock.visualDescription, 
+      pictureUrl: rock.pictureUrl, 
+      rockFormation: rock.rockFormation,
+      mineralComposition: rock.mineralComposition,
+      location: rock.location,
+      mohsScale: rock.mohsScale
+    })
   }
 
   return (
