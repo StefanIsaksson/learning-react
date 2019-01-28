@@ -12,6 +12,7 @@ const App = () => {
   const updateRockList = () => {
     axios.get('/api/v1/rocks/').then(
       response => { 
+        console.log(response.data);
         setRocks(response.data) ;
       }
     )
@@ -21,7 +22,7 @@ const App = () => {
     () => { updateRockList(); }, []
   );
 
-  const initialFormState = { id: null, name: '', visualDescription: '' }
+  const initialFormState = { id: null, name: '', visualDescription: '', pictureUrl: '' }
 
   const [rocks, setRocks] = useState(rocksData)
 
@@ -50,7 +51,7 @@ const App = () => {
   const updateRock = (id, updatedRock) => {
     setEditing(false)
 
-    axios.put(`/api/v1/rocks/${id}`, updatedRock).then(
+    axios.patch(`/api/v1/rocks/${id}`, updatedRock).then(
       () => {
         updateRockList();
       }
@@ -60,7 +61,7 @@ const App = () => {
   const editRock = rock => {
     setEditing(true)
 
-    setCurrentRock({ id: rock.id, name: rock.name, visualDescription: rock.visualDescription })
+    setCurrentRock({ id: rock.id, name: rock.name, visualDescription: rock.visualDescription, pictureUrl: rock.pictureUrl })
   }
 
   return (

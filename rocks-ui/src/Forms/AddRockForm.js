@@ -22,7 +22,7 @@ const AddRockForm = props => {
         >
             <h4>Add rock</h4>
             <div className="form-group">
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
                 <input type="text"
                     className="form-control"
                     name="name"
@@ -32,7 +32,7 @@ const AddRockForm = props => {
                     onChange={handleInputChange} />
             </div>
             <div className="form-group">
-                <label for="visualDescription">Visual Description</label>
+                <label htmlFor="visualDescription">Visual Description</label>
                 <textarea type="text"
                     id="visualDescription"
                     name="visualDescription"
