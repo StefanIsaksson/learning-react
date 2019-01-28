@@ -26,7 +26,7 @@ const RockTable = props => (
       <thead>
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">Visual Description</th>
+          <th scope="col">Location</th>
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>
@@ -36,7 +36,7 @@ const RockTable = props => (
           ? (props.rocks.map(rock => (
             <tr key={rock.id}>
               <td>{rock.name}</td>
-              <td>{rock.visualDescription}</td>
+              <td>{rock.location}</td>
               <td>
                 <button
                   className="btn btn-primary"
