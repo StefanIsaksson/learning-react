@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from 'axios';
 import RockTable from './Tables/RockTable'
 import AddRockForm from './Forms/AddRockForm'
 import EditRockForm from './Forms/EditRockForm'
-import Header from './Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
@@ -11,9 +11,9 @@ const App = () => {
 
   const updateRockList = () => {
     axios.get('/api/v1/rocks/').then(
-      response => { 
+      response => {
         console.log(response.data);
-        setRocks(response.data) ;
+        setRocks(response.data);
       }
     )
   }
@@ -66,18 +66,13 @@ const App = () => {
 
   return (
     <div className="container">
-      <Header/>
-          {editing ? (
-              <EditRockForm
-                editing={editing}
-                setEditing={setEditing}
-                currentRock={currentRock}
-                updateRock={updateRock}
-              />
-          ) : (
-                <AddRockForm addRock={addRock} />
-            )}
-          <RockTable rocks={rocks} editRock={editRock} deleteRock={deleteRock} />
+    <Router>
+      <div>
+        <Route path="/" exact render={() => <RockTable rocks={rocks} editing={editing} editRock={editRock} deleteRock={deleteRock} />} />
+        <Route path="/add/" render={() => <AddRockForm addRock={addRock} />} />
+        <Route path="/edit/" render={() => <EditRockForm editing={editing} setEditing={setEditing} currentRock={currentRock} updateRock={updateRock} />} />
+      </div>
+    </Router>
     </div>
   )
 }

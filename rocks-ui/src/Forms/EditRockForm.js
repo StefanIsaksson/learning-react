@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { Redirect } from 'react-router'
 
 const EditUserForm = props => {
 	const [rock, setRock] = useState(props.currentRock)
-
+	
 	useEffect(
 		() => {
 			setRock(props.currentRock)
@@ -17,16 +18,27 @@ const EditUserForm = props => {
 	}
 	console.log(rock)
 	return (
+
 		<div className="row">
 			<div className="col-md-12">
 				<form
 					onSubmit={event => {
 						event.preventDefault()
-
-						props.updateRock(rock.id, rock)
+						console.log(props.editing)
+						if(props.editing){
+							props.updateRock(rock.id, rock)
+						} 
 					}}
 				>
-					<h4>Edit rock</h4>
+
+					{ !props.editing && 
+						<Redirect to='/'/>
+					}
+				
+					<h1>Edit rock</h1>
+					{ rock.pictureUrl && 
+						<img className="picture" src={rock.pictureUrl} alt="" ></img>
+					}
 					<div className="form-group">
 						<label htmlFor="name">Name</label>
 						<input type="text"
@@ -37,9 +49,6 @@ const EditUserForm = props => {
 							value={rock.name}
 							onChange={handleInputChange} />
 					</div>
-					{ rock.pictureUrl && 
-						<img className="picture" src={rock.pictureUrl} alt="" ></img>
-					}
 					<div className="form-group">
 						<label htmlFor="visualDescription">Visual Description</label>
 						<textarea type="text"

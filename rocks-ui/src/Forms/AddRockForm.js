@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+import { Redirect } from 'react-router'
+
 
 const AddRockForm = props => {
     const initialFormState = { id: null, name: '', visualDescription: '' }
     const [rock, setRock] = useState(initialFormState)
+    const [adding, setAdding] = useState(true)
 
     const handleInputChange = event => {
         const { name, value } = event.target
@@ -16,11 +20,16 @@ const AddRockForm = props => {
                 event.preventDefault()
                 if (!rock.name || !rock.visualDescription) return
 
-                props.addRock(rock)
-                setRock(initialFormState)
+                props.addRock(rock);
+                setRock(initialFormState);
+                setAdding(false);
             }}
         >
-            <h4>Add rock</h4>
+            {!adding &&
+                <Redirect to='/' />
+            }
+
+            <h1>Add rock</h1>
             <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input type="text"
@@ -42,6 +51,7 @@ const AddRockForm = props => {
                     onChange={handleInputChange} />
             </div>
             <button className="btn btn-primary">Add new rock</button>
+            <Link to="/"><button className="btn btn-warning">Cancel</button></Link>
         </form>
     )
 }

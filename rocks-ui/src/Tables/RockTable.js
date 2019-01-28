@@ -1,11 +1,27 @@
 import React from 'react'
+import { Redirect } from 'react-router'
+import { Link } from "react-router-dom";
+
 
 const RockTable = props => (
   <div>
+
+    
+
+
+    {props.editing &&
+      <Redirect to='/edit'/>
+    }
+
     <div className="row">
-      <br/>
+      <div className="col-md-12">
+        <h1>List of rocks</h1>
+        <Link to="/add"><button className="btn btn-primary">Add new rock</button></Link>
+      </div>
     </div>
-    <h4>List of rocks</h4>
+    <div className="row">
+    <br/>
+    </div>
     <table className="table table-striped">
       <thead>
         <tr>
