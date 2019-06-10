@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Gunship Expanded Expanded';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gunship Expanded Expanded'), url('gunv2e.woff') format('woff');
+}
+@font-face {
+    font-family: 'MicroMieps Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MicroMieps Regular'), url('MicroMrg.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arsenale White';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arsenale White'), url('arsenale_white.woff') format('woff');
+  }
+@font-face {
+    font-family: 'Scriptina Pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Scriptina Pro'), url('Scriptina Pro.woff') format('woff');
+}
+@font-face {
+    font-family: 'SCARFACE';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SCARFACE'), url('SCARFACE.woff') format('woff');
+}
+@font-face {
+  font-family: 'pastelRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('pastelRegular'), url('pastel crayon.woff') format('woff');
+}
+@font-face {
+  font-family: 'the King & Queen font';
+  font-style: normal;
+  font-weight: normal;
+  src: local('the King & Queen font'), url('the_King__26_Queen_font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Quickpen';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quickpen'), url('Trial by Cupcakes - Quickpen.woff') format('woff');
+}
+@font-face {
+  font-family: 'Jellyka Wonderland Wine';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Jellyka Wonderland Wine'), url('JellykaWonderlandWine.woff') format('woff');
+}
+@font-face {
+  font-family: 'Sick Capital Vice';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sick Capital Vice'), url('sickcapital-vice.woff') format('woff');
+}
+@font-face {
+  font-family: 'Aquiline';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Aquiline'), url('Aquiline.woff') format('woff');
+}
+@font-face {
+  font-family: 'Jellyka Gare de Chambord';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Jellyka Gare de Chambord'), url('Gare_de_Chambord .woff') format('woff');
+}
+@font-face {
+  font-family: 'Tequila';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tequila'), url('TEQUILA_.woff') format('woff');
+}
+@font-face {
+  font-family: 'KidsFirstPrintFont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('KidsFirstPrintFont'), url('KidsFirstPrintFont.woff') format('woff');
+}
+@font-face {
+  font-family: '18th Century Kurrent Text';
+  font-style: normal;
+  font-weight: normal;
+  src: local('18th Century Kurrent Text'), url('18thCtrKurTxt.woff') format('woff');
+}
+@font-face {
+  font-family: 'Old Stamper';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Old Stamper'), url('old_stamper.woff') format('woff');
+}
+@font-face {
+  font-family: 'IBM Plex Mono Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('IBM Plex Mono Regular'), url('IBMPlexMono-Regular.woff') format('woff');
+  }
+@font-face {
+    font-family: 'Celine Dion Handwriting';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Celine Dion Handwriting'), url('Celine_Dion_Handwriting.woff') format('woff');
+}
+@font-face {
+  font-family: 'Sweetie Pie';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sweetie Pie'), url('Sweetie Pie.woff') format('woff');
+}
+@font-face {
+  font-family: 'Franz Kafka';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Franz Kafka'), url('kafka.woff') format('woff');
+}
+@font-face {
+  font-family: 'Dark Theater';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dark Theater'), url('Dark Theater.woff') format('woff');
+}
+@font-face {
+  font-family: 'bedtime stories';
+  font-style: normal;
+  font-weight: normal;
+  src: local('bedtime stories'), url('bedtime stories.woff') format('woff');
+}
+  
+
+h1 {
+  font-family: 'Gunship Expanded Expanded';
+  font-weight: 200;
+  color: white;
+}

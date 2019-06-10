@@ -1,0 +1,100 @@
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.customerCard {
+  width: 15em;
+  height: 25em;
+}
+
+.digital {
+  font-family:'MicroMieps Regular';
+}
+
+.handwrite {
+  font-weight: normal;
+  font-size:24px;
+  color: blue;
+}
+
+.poor {
+  font-family: 'Arsenale White';
+}
+
+.beautiful {
+  font-family:'Scriptina Pro';
+}
+
+.terrifying {
+  font-family:'SCARFACE';
+}
+
+.childish {
+  font-family:'pastelRegular';
+}
+
+.royal {
+  font-family:'the King & Queen font';
+}
+
+.fast {
+  font-family:'Quickpen';
+}
+
+.outlandish {
+  font-family:'Jellyka Wonderland Wine';
+}
+
+.graffiti {
+  font-family:'Sick Capital Vice';
+}
+
+.ancient {
+  font-family:'Aquiline';
+}
+
+.normalish {
+  font-family:'Jellyka Gare de Chambord';
+}
+
+.scary {
+  font-family:'Tequila';
+}
+
+.kid {
+  font-family:'KidsFirstPrintFont';
+}
+
+.vampire {
+  font-family:'18th Century Kurrent Text';
+}
+
+.delightful {
+  font-family:'Celine Dion Handwriting';
+}
+
+.stamp {
+  font-family:'Old Stamper';
+  color: #595FAE;
+}
+
+.computer {
+  font-family:'IBM Plex Mono Regular';
+}
+
+.love {
+  font-family:'Sweetie Pie';
+}
+
+.writer {
+  font-family:'Franz Kafka';
+}
+
+.messy {
+  font-family:'Dark Theater';
+}
+
+.cute {
+  font-family:'bedtime stories';
+}
