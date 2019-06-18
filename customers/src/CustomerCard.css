@@ -107,6 +107,38 @@ img {
   font-family:'bedtime stories';
 }
 
+.classy {
+  font-family:'Brock Script';
+}
+
+.cool {
+  font-family:'Biloxi Script';
+}
+
+.cultured {
+  font-family:'Jellyka BeesAntique Handwriting';
+}
+
+.hiphop {
+  font-family:'Raslani Hip Hop';
+}
+
+.manga {
+  font-family:'Japanese Brush';
+}
+
+.messy_grafitti{
+  font-family:'URBAN HOOKUPZ Bold';
+}
+
+.sloppy_bad {
+  font-family:'ANaRcHy';
+}
+
+.rock{
+  font-family:'Rock Show Whiplash';
+}
+
 .tiny_left_rotation {
   transform: rotate(-1deg);
 }

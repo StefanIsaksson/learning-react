@@ -18,10 +18,14 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
     const asciiOnly = ascii.test(name);
 
     if (asciiOnly) {
-      if (score >= 0.8) {
+      if (score >= 35) { 
+        return 'sloppy_bad'; 
+      } else if (score >= 1.0) {
         return 'terrifying';
-      } else if (score >= 0.7) {
+      }else if (score >= 0.8) {
         return 'childish';
+      } else if (score >= 0.7) {
+        return 'manga';
       } else if (score >= 0.6) {
         return 'love';
       } else if (score >= 0.5) {
@@ -30,77 +34,90 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
         return 'vampire';
       } else if (score >= 0.3) {
         return 'ancient';
-      }
-    } else {
-      if (score >= 0.9) {
-        return 'kid';
-      } else if (score >= 0.8) {
-        return 'messy';
-      } else if (score >= 0.7) {
-        return 'fast';
-      } else if (score >= 0.6) {
-        return 'outlandish';
-      } else if (score >= 0.5) {
-        return 'graffiti';
-      } else if (score >= 0.4) {
-        return 'normalish';
-      } else if (score >= 0.3) {
-        return 'scary';
       } else if (score >= 0.2) {
-        return 'royal';
-      } else if (score >= 0.1) {
-        return 'delightful';
-      } else if (score >= 0.05) {
-        return 'writer';
-      } else if (score >= 0.02) {
-        return 'cute';
+        return 'cool';
       }
     }
+
+    if (score >= 80.0) {
+      return 'rock';
+    } else if (score >= 15.0) {
+      return 'kid';
+    } else if (score >= 10.0) {
+      return 'messy_grafitti';
+    } else if (score >= 5.0) {
+      return 'scary';
+    } else if (score >= 0.9) {
+      return 'hiphop';
+    } else if (score >= 0.8) {
+      return 'cute';
+    } else if (score >= 0.6) {
+      return 'outlandish';
+    } else if (score >= 0.5) {
+      return 'graffiti';
+    } else if (score >= 0.4) {
+      return 'messy'; 
+    } else if (score >= 0.3) {
+      return 'fast';
+    } else if (score >= 0.2) {
+      return 'royal';
+    } else if (score >= 0.1) {
+      return 'delightful';
+    } else if (score >= 0.08) {
+      return 'cultured';
+    }else if (score >= 0.06) {
+      return 'writer';
+    } else if (score >= 0.04) {
+      return 'normalish';
+    } else if (score >= 0.02) {
+      return 'classy';
+    }
+
     return 'beautiful';
   }
 
   function get_handwrite_rotation(income) {
-    if(income > 80000){
+    if (income > 80000) {
       return 'large_right_rotation';
-    } else if (income > 70000){
+    } else if (income > 70000) {
       return 'medium_right_rotation';
-    } else if (income > 60000){
+    } else if (income > 60000) {
       return 'small_right_rotation';
-    } else if (income > 50000){
+    } else if (income > 50000) {
       return 'tiny_right_rotation';
-    } else if (income > 40000){
+    } else if (income > 40000) {
       return 'no_stamp_rotation';
-    } else if (income > 30000){
+    } else if (income > 30000) {
       return 'tiny_leftt_rotation';
-    } else if (income > 20000){
+    } else if (income > 20000) {
       return 'small_left_rotation';
-    } else if (income > 10000){
+    } else if (income > 10000) {
       return 'medium_left_rotation';
     } else {
       return 'large_left_rotation';
-    } 
+    }
   }
 
   function get_stamp_rotation(age) {
-    if(age > 90){
+    if (age > 90) {
       return 'large_right_rotation';
-    } else if (age > 80){
+    } else if (age > 80) {
       return 'medium_right_rotation';
-    } else if (age > 70){
+    } else if (age > 70) {
       return 'small_right_rotation';
-    } else if (age > 60){
+    } else if (age > 60) {
       return 'tiny_right_rotation';
-    } else if (age > 50){
+    } else if (age > 50) {
       return 'no_stamp_rotation';
-    } else if (age > 40){
+    } else if (age > 40) {
       return 'tiny_leftt_rotation';
-    } else if (age > 30){
+    } else if (age > 30) {
       return 'small_left_rotation';
-    } else if (age > 20){
+    } else if (age > 20) {
       return 'medium_left_rotation';
     } else {
       return 'large_left_rotation';
-    } 
+    }
   }
 
   const personal_name_font = get_personal_name_font(name, score);

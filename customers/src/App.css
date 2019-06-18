@@ -130,7 +130,62 @@
   font-weight: normal;
   src: local('bedtime stories'), url('bedtime stories.woff') format('woff');
 }
-  
+
+@font-face {
+  font-family: 'Brock Script';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Brock Script'), url('BrockScript.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Biloxi Script';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Biloxi Script'), url('Biloxi Script.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jellyka BeesAntique Handwriting';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Jellyka BeesAntique Handwriting'), url('Jellyka Bees Antique Handwriting.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Raslani Hip Hop';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raslani Hip Hop'), url('Raslani Hip Hop.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Japanese Brush';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Japanese Brush'), url('JAPAB___.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'URBAN HOOKUPZ Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('URBAN HOOKUPZ Bold'), url('URBAN_HOOK-UPZ.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'ANaRcHy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ANaRcHy'), url('Anarchy.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Rock Show Whiplash';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rock Show Whiplash'), url('Rock Show Whiplash.woff') format('woff');
+  }
 
 h1 {
   font-family: 'Gunship Expanded Expanded';
