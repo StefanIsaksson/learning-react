@@ -18,6 +18,7 @@ const CustomerCardList = ({ customers }) => {
               maritalStatus={customer.maritalStatus} 
               address={customer.address} 
               lastUpdated={customer.lastUpdated} 
+              gender={customer.gender} 
               />
           );
         })

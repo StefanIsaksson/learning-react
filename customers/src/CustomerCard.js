@@ -1,7 +1,7 @@
 import React from 'react';
 import './CustomerCard.css';
 
-const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus, address, lastUpdated }) => {
+const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus, address, lastUpdated, gender }) => {
 
   function copyToClipboard() {
     if (navigator.clipboard) {
@@ -67,7 +67,7 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
     <div className="ma3 dib container_card" onClick={copyToClipboard}>
       <article className="center bg-light-blue br3 pa4 ba b--black-10 ma2 grow shadow-S">
         <div className="customerCard tc">
-          <p className="tl f4 fw4 black mt0 fl w-50 digital">{score}</p><p className="tr f5 fw4 gray mt0 fl w-50 computer">{address}</p>
+          <p className="tl f4 fw4 black mt0 fl w-50 digital">{score}%</p><p className="tr f5 fw4 gray mt0 fl w-50 computer">{address}</p>
           <img src={`img/${id}.png`} className="br-100 h4 w4 dib ba b--black-05 pa2 tc" alt="person" />
           <h2 className={`mb2 handwrite name_field ${personal_name_font}`}>{name}</h2>
           <h2 className="f3 mb5 stamp">{ssn}</h2>
@@ -75,6 +75,11 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
           <div>
             <p className="tl f6 fw4 black mt0 fl w-40 computer capitalize">Income</p>
             <p className="tr f6 fw4 gray mt0 fl w-60 computer">{income.toLocaleString('en')} kr/month</p>
+          </div>
+
+          <div>
+            <p className="tl f6 fw4 black mt0 fl w-40 computer capitalize">Gender</p>
+            <p className="tr f6 fw4 gray mt0 fl w-60 computer">{gender}</p>
           </div>
 
           <div>
