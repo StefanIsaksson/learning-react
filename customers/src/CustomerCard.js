@@ -1,7 +1,7 @@
 import React from 'react';
 import './CustomerCard.css';
 
-const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus, address, lastUpdated, gender }) => {
+const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus, address, lastUpdated, gender, age }) => {
 
   function copyToClipboard() {
     if (navigator.clipboard) {
@@ -80,6 +80,11 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
           <div>
             <p className="tl f6 fw4 black mt0 fl w-40 computer capitalize">Gender</p>
             <p className="tr f6 fw4 gray mt0 fl w-60 computer">{gender}</p>
+          </div>
+
+          <div>
+            <p className="tl f6 fw4 black mt0 fl w-40 computer capitalize">Age</p>
+            <p className="tr f6 fw4 gray mt0 fl w-60 computer">{age}</p>
           </div>
 
           <div>
