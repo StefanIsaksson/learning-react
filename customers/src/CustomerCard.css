@@ -106,3 +106,35 @@ img {
 .cute {
   font-family:'bedtime stories';
 }
+
+.tiny_left_rotation {
+  transform: rotate(-1deg);
+}
+
+.small_left_rotation {
+  transform: rotate(-2deg);
+}
+
+.medium_left_rotation {
+  transform: rotate(-3deg);
+}
+
+.large_left_rotation {
+  transform: rotate(-4deg);
+}
+
+.tiny_right_rotation {
+  transform: rotate(1deg);
+}
+
+.small_right_rotation {
+  transform: rotate(2deg);
+}
+
+.medium_right_rotation {
+  transform: rotate(3deg);
+}
+
+.large_right_rotation {
+  transform: rotate(4deg);
+}

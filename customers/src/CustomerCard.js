@@ -59,9 +59,55 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
     return 'beautiful';
   }
 
+  function get_handwrite_rotation(income) {
+    if(income > 80000){
+      return 'large_right_rotation';
+    } else if (income > 70000){
+      return 'medium_right_rotation';
+    } else if (income > 60000){
+      return 'small_right_rotation';
+    } else if (income > 50000){
+      return 'tiny_right_rotation';
+    } else if (income > 40000){
+      return 'no_stamp_rotation';
+    } else if (income > 30000){
+      return 'tiny_leftt_rotation';
+    } else if (income > 20000){
+      return 'small_left_rotation';
+    } else if (income > 10000){
+      return 'medium_left_rotation';
+    } else {
+      return 'large_left_rotation';
+    } 
+  }
+
+  function get_stamp_rotation(age) {
+    if(age > 90){
+      return 'large_right_rotation';
+    } else if (age > 80){
+      return 'medium_right_rotation';
+    } else if (age > 70){
+      return 'small_right_rotation';
+    } else if (age > 60){
+      return 'tiny_right_rotation';
+    } else if (age > 50){
+      return 'no_stamp_rotation';
+    } else if (age > 40){
+      return 'tiny_leftt_rotation';
+    } else if (age > 30){
+      return 'small_left_rotation';
+    } else if (age > 20){
+      return 'medium_left_rotation';
+    } else {
+      return 'large_left_rotation';
+    } 
+  }
+
   const personal_name_font = get_personal_name_font(name, score);
 
+  const handwrite_rotation = get_handwrite_rotation(income);
 
+  const stamp_rotation = get_stamp_rotation(age);
 
   return (
     <div className="ma3 dib container_card" onClick={copyToClipboard}>
@@ -69,8 +115,8 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
         <div className="customerCard tc">
           <p className="tl f4 fw4 black mt0 fl w-50 digital">{score}%</p><p className="tr f5 fw4 gray mt0 fl w-50 computer">{address}</p>
           <img src={`img/${id}.png`} className="br-100 h4 w4 dib ba b--black-05 pa2 tc" alt="person" />
-          <h2 className={`mb2 handwrite name_field ${personal_name_font}`}>{name}</h2>
-          <h2 className="f3 mb5 stamp">{ssn}</h2>
+          <h2 className={`mb2 handwrite name_field ${personal_name_font} ${handwrite_rotation}`}>{name}</h2>
+          <h2 className={`f3 mb5 stamp ${stamp_rotation}`}>{ssn}</h2>
 
           <div>
             <p className="tl f6 fw4 black mt0 fl w-40 computer capitalize">Income</p>
