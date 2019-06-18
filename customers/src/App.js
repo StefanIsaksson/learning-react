@@ -17,7 +17,7 @@ class App extends Component {
 
   retrieveCustomers = (name) => {
     console.log(name);
-    fetch(`/customers?name=${name ? name : ''}`)
+    fetch(`/customers?searchQuery=${name ? name : ''}`)
       .then(response => response.json())
       .then(persons => this.setState({ customers: persons }));
   }

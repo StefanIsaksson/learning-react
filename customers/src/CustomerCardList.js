@@ -15,6 +15,9 @@ const CustomerCardList = ({ customers }) => {
               income={customer.income}
               score={customer.score} 
               partnerName={customer.partnerName} 
+              maritalStatus={customer.maritalStatus} 
+              address={customer.address} 
+              lastUpdated={customer.lastUpdated} 
               />
           );
         })
