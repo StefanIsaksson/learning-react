@@ -128,7 +128,7 @@ const CustomerCard = ({ name, ssn, score, income, id, partnerName, maritalStatus
 
   return (
     <div className="ma3 dib container_card" onClick={copyToClipboard}>
-      <article className="center bg-light-blue br3 pa4 ba b--black-10 ma2 grow shadow-S">
+      <article className="center br3 pa4 ba b--black-10 ma2 grow shadow-S">
         <div className="customerCard tc">
           <p className="tl f4 fw4 black mt0 fl w-50 digital">{score}%</p><p className="tr f5 fw4 gray mt0 fl w-50 computer">{address}</p>
           <img src={`img/${id}.png`} className="br-100 h4 w4 dib ba b--black-05 pa2 tc" alt="person" />

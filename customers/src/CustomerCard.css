@@ -1,4 +1,9 @@
+article {
+  background: rgba(253, 253, 253, 0.75);
+}
+
 img {
+  opacity: 1;
   height: 200px;
   width: 200px;
 }

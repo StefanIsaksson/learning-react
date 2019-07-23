@@ -37,13 +37,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="tc">
-        <h1 className="f1">Customers</h1>
-        <div>
-          <SearchBox searchChange={this.onSearchChange} />
-          <RefreshButton refreshClick={this.onRefreshClick} />
+      <div>
+        <div id="space_background">
+          <div className="stars"></div>
+          <div className="twinkling"></div>
+          <div className="clouds"></div>
         </div>
-        <CustomerCardList customers={this.state.customers} />
+        <div id="app" className="tc">
+          <h1 className="f1">Customers</h1>
+          <div>
+            <SearchBox searchChange={this.onSearchChange} />
+            <RefreshButton refreshClick={this.onRefreshClick} />
+          </div>
+         <CustomerCardList customers={this.state.customers} />
+        </div>
       </div>
     );
   }
